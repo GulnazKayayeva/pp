@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+img{
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+    transition: .3s ease;
+    animation: name infinite 2s ease;
+}
+
+@keyframes name {
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+.bg{
+    display: none;
+
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    transition: .3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+form{
+    height: 1000px;
+    width: 600px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pop{
+    height: 70px;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input{
+    all: unset ;
+    height: 15px;
+    width: 200px;
+    padding: 13px 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px 80px;
+    width: 450px;
+    margin: 0 auto;
+}
+
+
+button{
+    height: 40px;
+    width: 200px;
+    background-color: rgb(138, 59, 161);
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.but{
+    background-color: red;
+    color: black;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.ll{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(98, 98, 98);
+}
+
+.invalid{
+    border: 2px solid red;
+}
+
+.valid{
+    border: 2px solid green;
+}
+
+.dad{
+    position: relative;
+}
+
+svg{
+    visibility: hidden;
+    position: absolute;
+}
+
+.dad.in .no{
+    visibility: visible;
+	position: absolute;
+	top: 35px;
+	right: -25px;
+    fill: red;
+}
+
+.dad.v .done{
+    visibility: visible;
+	position: absolute;
+	top: 35px;
+	right: -25px;
+    fill: green;
+}
